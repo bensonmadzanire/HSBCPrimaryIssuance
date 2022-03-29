@@ -29,8 +29,8 @@ public class stepdefinitions {
     public void iEnterThePasswordAs(String password) {
         LoginPage loginPage = new LoginPage();
         loginPage.capturePasswordField(password);
-    }
 
+    }
     @And("I click confugration tab")
     public void iClickConfugrationTab() {
         HomePage homePage = new HomePage();
