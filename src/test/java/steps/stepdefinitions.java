@@ -7,6 +7,8 @@ import pages.HomePage;
 import pages.LoginPage;
 
 public class stepdefinitions {
+
+    LoginPage loginPage = new LoginPage();
     @Given("I navigate to the application")
     public void i_navigate_to_the_application() {
         FrameworkConfig.LocalPage.navigate("https://dev-hsbc-priss1/login");
@@ -15,27 +17,20 @@ public class stepdefinitions {
 
         @And("I click login button")
     public void iClickLoginButton() {
-     LoginPage loginPage = new LoginPage();
+
      loginPage.clickLoginButton();
     }
 
     @And("I enter the username as  {string}")
     public void iEnterTheUsernameAs(String userName) {
-        LoginPage loginPage = new LoginPage();
+
         loginPage.captureUsernameField(userName);
     }
 
     @And("I enter the password as {string}")
     public void iEnterThePasswordAs(String password) {
-        LoginPage loginPage = new LoginPage();
+
         loginPage.capturePasswordField(password);
-
-    }
-    @And("I click confugration tab")
-    public void iClickConfugrationTab() {
-        HomePage homePage = new HomePage();
-        homePage.clickConfiguration();
-
     }
 
     }

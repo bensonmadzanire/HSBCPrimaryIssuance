@@ -9,31 +9,27 @@ public class LoginPage {
 
     Page page = FrameworkConfig.LocalPage;
 
-    String txtUserName = "#control";
-    String txtPassword = "#control";
-    String btnLogin = "foundation-login-form[ssologinroute='/gwf/saml/login']";
+    String txtUserName = "text";
+    String txtPassword = "password";
+    String btnLogin = "submit";
 
 
-    /*public void Login(String userName, String password) {
-        page.fill(txtUserName, userName);
-        page.fill(txtPassword, password);
-        page.click(btnLogin);
-
-
-    }*/
 
     public boolean captureUsernameField(String userName) {
-     page.fill(txtUserName,userName);
+        ElementHandle handle = page.querySelector("css=[type="+txtUserName+"]").querySelector("input");
+        handle.fill(userName);
+       // page.fill(txtUserName,userName);
         return true;
     }
     public boolean capturePasswordField(String password) {
-        page.inputValue(txtPassword);
-        page.fill(txtPassword,password);
+        ElementHandle handle = page.querySelector("css=[type="+txtPassword+"]").querySelector("input");
+        handle.fill(password);
+        //page.fill(txtUserName,userName);
         return true;
     }
 
     public boolean clickLoginButton() {
-        page.click(btnLogin);
+        page.dispatchEvent("zero-button:has-text('Login') >> visible=true", "click");
         return true;
     }
 
