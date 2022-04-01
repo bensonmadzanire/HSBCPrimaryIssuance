@@ -18,13 +18,11 @@ public class LoginPage {
     public boolean captureUsernameField(String userName) {
         ElementHandle handle = page.querySelector("css=[type="+txtUserName+"]").querySelector("input");
         handle.fill(userName);
-       // page.fill(txtUserName,userName);
-        return true;
+         return true;
     }
     public boolean capturePasswordField(String password) {
         ElementHandle handle = page.querySelector("css=[type="+txtPassword+"]").querySelector("input");
         handle.fill(password);
-        //page.fill(txtUserName,userName);
         return true;
     }
 

@@ -9,9 +9,10 @@ import pages.LoginPage;
 public class stepdefinitions {
 
     LoginPage loginPage = new LoginPage();
+    HomePage homePage = new HomePage();
     @Given("I navigate to the application")
     public void i_navigate_to_the_application() {
-        FrameworkConfig.LocalPage.navigate("https://dev-hsbc-priss1/login");
+        FrameworkConfig.LocalPage.navigate("https://dev-hsbc-priss3/login");
 
     }
 
@@ -33,4 +34,68 @@ public class stepdefinitions {
         loginPage.capturePasswordField(password);
     }
 
+    @And("I click Create Composite button")
+    public void iClickCreateCompositeButton() {
+        homePage.clickCreateComposite();
     }
+
+    @And("I enter the issuer name as {string}")
+    public void iEnterTheIssuerNameAs(String issuerName) {
+        homePage.enterIssuerName(issuerName);
+    }
+
+    @And("I click category and ratings tab")
+    public void iClickCategoryAndRatingsTab() {
+        homePage.clickRatings();
+    }
+
+    @And("I click submit button")
+    public void iClickSubmitButton() {
+        homePage.clickSubmitButton();
+    }
+
+    @And("I click cancel button")
+    public void iClickCancelButton() {
+        homePage.clickCancelButton();
+    }
+
+    @And("I click the Implementation tab")
+    public void iClickTheImplementationTab() {
+        homePage.clickImplemenationTab();
+    }
+
+    @And("I click  the close book button")
+    public void iClickTheCloseBookButton() {
+        homePage.clickCloseBookButton();
+    }
+
+    @And("I click close book now button")
+    public void iClickCloseBookNowButton() {
+        homePage.clickCloseBookNow();
+    }
+
+    @And("I click send to bookrunners button")
+    public void iClickSendToBookrunnersButton() {
+        homePage.clickSendToBookrunners();
+    }
+
+    @And("I click the Infor Trail tab")
+    public void iClickTheInforTrailTab() {
+        homePage.clickInforTrailTab();
+    }
+
+    @And("I click the Decision screen")
+    public void iClickTheDecisionScreen() {
+        homePage.clickDecisionTab();
+    }
+
+    @And("I click the joint bookrunners checkbox")
+    public void iClickTheJointBookrunnersCheckbox() {
+        homePage.clickJointBookrunnersChecbox();
+    }
+
+    @And("I click the Category and Ratings tab")
+    public void iClickTheCategoryAndRatingsTab() {
+        homePage.clickRatings();
+    }
+}
