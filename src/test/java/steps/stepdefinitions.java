@@ -10,9 +10,10 @@ public class stepdefinitions {
 
     LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
+
     @Given("I navigate to the application")
     public void i_navigate_to_the_application() {
-        FrameworkConfig.LocalPage.navigate("https://dev-hsbc-priss3/login");
+        FrameworkConfig.LocalPage.navigate("https://dev-hsbc-priss1/login");
 
     }
 
@@ -91,11 +92,27 @@ public class stepdefinitions {
 
     @And("I click the joint bookrunners checkbox")
     public void iClickTheJointBookrunnersCheckbox() {
-        homePage.clickJointBookrunnersChecbox();
+    homePage.clickJointBookrunnersChecbox();
+
     }
 
     @And("I click the Category and Ratings tab")
     public void iClickTheCategoryAndRatingsTab() {
         homePage.clickRatings();
+    }
+
+    @And("I click  the billing bank")
+    public void iClickTheBillingBank() {
+
+    }
+
+    @And("I click timer radio button")
+    public void iClickTimerRadioButton() {
+        homePage.clickTimerRadioButton();
+    }
+
+    @And("I click  the close book")
+    public void iClickTheCloseBook() {
+        homePage.clickCloseBooksButton();
     }
 }

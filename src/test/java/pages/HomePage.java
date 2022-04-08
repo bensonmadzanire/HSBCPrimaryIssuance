@@ -11,10 +11,23 @@ public class HomePage {
 
 
     String txtIssuerName = "text";
-    String chkJointBookrunner= "text='Joint bookrunners'";
+
+    public boolean clickCloseBooksButton(){
+        page.dispatchEvent("zero-button:has-text('Close Book') >> visible=true", "click");
+        return true;
+    }
+
+    public boolean clickTimerRadioButton(){
+        page.dispatchEvent("zero-radio:has-text('Timer') >> visible=true", "click");
+        return true;
+    }
+    public boolean clicktheBillingBank(){
+        page.dispatchEvent("fast-checkbox:has-text('HSBC') >> visible=true", "click");
+        return true;
+    }
 
     public boolean clickJointBookrunnersChecbox(){
-        page.click(chkJointBookrunner);
+        page.dispatchEvent("fast-checkbox:has-text('Joint bookrunners') >> visible=true", "click");
         return true;
     }
 
