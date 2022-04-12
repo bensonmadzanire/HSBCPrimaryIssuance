@@ -42,7 +42,10 @@ public class HomePage {
         return true;
     }
 
-
+    public boolean clickPrimaryIssuanceTab(){
+        page.dispatchEvent("zero-tab:has-text('Primary issuance activity') >> visible=true", "click");
+        return true;
+    }
 
     public boolean clickSendToBookrunners(){
         page.dispatchEvent("zero-button:has-text('Send to bookrunners') >> visible=true", "click");
@@ -71,13 +74,6 @@ public class HomePage {
         return true;
     }
 
-    public boolean captureIssuerNameField(String issuerName) {
-        //ElementHandle handle = page.querySelector("css=[type="+txtUserName+"]").querySelector("input");
-        ElementHandle handle = page.querySelector("css=[type=" + txtIssuerName + "]").querySelector("input");
-        handle.fill(issuerName);
-        return true;
-    }
-
     public boolean clickRatings() {
         page.dispatchEvent("fast-tab:has-text('Category & ratings') >> visible=true", "click");
         return true;
@@ -91,12 +87,7 @@ public class HomePage {
         page.dispatchEvent("zero-button:has-text('Cancel') >> visible=true", "click");
         return true;
     }
-    public boolean enterIssuerName(String issuerName){
-        ElementHandle handle = page.querySelector("css=[type=" + txtIssuerName + "]").querySelector("input");
-        handle.fill(issuerName);
-        return true;
 
-    }
 }
 
 

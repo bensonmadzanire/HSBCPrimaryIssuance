@@ -3,6 +3,7 @@ package steps;
 import base.FrameworkConfig;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import pages.CommonFunctions;
 import pages.HomePage;
 import pages.LoginPage;
 
@@ -42,7 +43,7 @@ public class stepdefinitions {
 
     @And("I enter the issuer name as {string}")
     public void iEnterTheIssuerNameAs(String issuerName) {
-        homePage.enterIssuerName(issuerName);
+        CommonFunctions.enterTextInTextBox("Issuer Name",issuerName);
     }
 
     @And("I click category and ratings tab")
@@ -114,5 +115,33 @@ public class stepdefinitions {
     @And("I click  the close book")
     public void iClickTheCloseBook() {
         homePage.clickCloseBooksButton();
+    }
+
+    @And("I enter the issuer tranche name as {string}")
+    public void iEnterTheIssuerTrancheNameAs(String trancheName) {
+        CommonFunctions.enterTextInTextBox("Issuer Tranche Name",trancheName);
+    }
+
+    @And("I click on registration type")
+    public void iClickOnRegistrationType() throws InterruptedException {
+        CommonFunctions.selectDropDownElementForHSBC("Registration Type","144A/Reg S");
+
+        //CommonFunctions.selectDropDownElementForHSBC("Deal Status","Announced");
+        //Thread.sleep(2000);
+    }
+
+    @And("I enter the Maturity date")
+    public void iEnterTheMaturityDate() {
+        CommonFunctions.typeCurrentDate("Maturity Date","12/12/2026");
+    }
+
+    @And("I enter the Tranche currency")
+    public void iEnterTheTrancheCurrency() {
+        CommonFunctions.selectDropDownElementForHSBC("Currency","CNY");
+    }
+
+    @And("I click the Primary Issuance activity tab")
+    public void iClickThePrimaryIssuanceActivityTab() {
+        homePage.clickPrimaryIssuanceTab();
     }
 }
