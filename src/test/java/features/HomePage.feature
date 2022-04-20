@@ -36,4 +36,6 @@ And   I click the Decision screen
     And   I enter the password as "Password11*"
     And   I click login button
     And   I click the Primary Issuance activity tab
+    And   I click the button on "0"
+    And   I click Create Composite button
    #And   I click cancel button

@@ -4,6 +4,7 @@ import base.FrameworkConfig;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import pages.CommonFunctions;
+import pages.GridFunctions;
 import pages.HomePage;
 import pages.LoginPage;
 
@@ -143,5 +144,12 @@ public class stepdefinitions {
     @And("I click the Primary Issuance activity tab")
     public void iClickThePrimaryIssuanceActivityTab() {
         homePage.clickPrimaryIssuanceTab();
+    }
+
+    @And("I click the button on {string}")
+    public void iClickTheButtonOn(String rowNumber) throws InterruptedException {
+        Thread.sleep(3000);
+        GridFunctions.selectPlusButtonInHSBCGrid(Integer.parseInt(rowNumber));
+        Thread.sleep(3000);
     }
 }
