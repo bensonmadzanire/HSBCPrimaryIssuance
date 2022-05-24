@@ -19,6 +19,14 @@ Feature: Test the Implementation page
     And   I click timer radio button
     And   I click  the close book
 
+  Scenario: Closing the book now
+    Given I navigate to the application
+    And   I enter the username as  "JohnDoe"
+    And   I enter the password as "Password11*"
+    And   I click login button
+    And   I click the Implementation tab
+    And   I click  the close book button
+    And   I click close book now button
 
 
   Scenario: Send to Bookrunners

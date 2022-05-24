@@ -669,4 +669,16 @@ public class CommonFunctions {
         Assert.assertEquals(actualElement.trim(),"disabled");
         // Assert.assertEquals(actualElement.trim(),"blueButton disabled");
     }
+    /**
+     * This is a common function which can be used to check if the element is present or not
+     * This is similar to the previous method, but it does not wait for a certain period of time
+     * @param elementSelector - The actual selector(element) should be passed as a parameter
+     */
+    public static void elementPresentAll(String elementSelector, String expectedElement) {
+        String actualElement;
+        ElementHandle handle = page.querySelector("text=\'" + elementSelector + "\'");
+        actualElement = handle.textContent();
+        Assert.assertEquals(actualElement.trim(), expectedElement);
+    }
+
 }

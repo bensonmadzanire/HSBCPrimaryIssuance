@@ -1,6 +1,22 @@
 Feature: Test the functionality on the SPA
 
-Scenario: Adding Issuance without entering mandatory fields
+
+  Scenario: Create a Composite
+    Given I navigate to the application
+    And   I enter the username as  "JohnDoe"
+    And   I enter the password as "Password11*"
+    And   I click login button
+    And   I click Create Composite button
+    And   I enter the issuer name as "TANDEM"
+    And   I enter the issuer tranche name as "TANROY"
+    And   I click on registration type
+    And   I enter the Maturity date
+    And   I enter the Tranche currency
+    And   I click submit button
+    #And   I click the Category and Ratings tab
+
+
+  Scenario: Adding Issuance without entering mandatory fields
 Given I navigate to the application
 And   I enter the username as  "JohnDoe"
 And   I enter the password as "Password11*"
@@ -10,17 +26,18 @@ And   I click submit button
 
 Scenario: Display the info trail screen
 Given I navigate to the application
-And   I enter the username as  "JohnDoe"
-And   I enter the password as "Password11*"
-And   I click login button
-And   I click the Infor Trail tab
+  And   I enter the username as  "JohnDoe"
+  And   I enter the password as "Password11*"
+  And   I click login button
+  And   I click the Infor Trail tab
+  And   I click the button on "0"
 
 Scenario: Display the Decision screen
-Given I navigate to the application
-And   I enter the username as  "JohnDoe"
-And   I enter the password as "Password11*"
-And   I click login button
-And   I click the Decision screen
+  Given I navigate to the application
+  And   I enter the username as  "JohnDoe"
+  And   I enter the password as "Password11*"
+  And   I click login button
+  And   I click the Decision screen
 
   Scenario: Cancelling an Issuance creation screen
     Given I navigate to the application
@@ -37,5 +54,42 @@ And   I click the Decision screen
     And   I click login button
     And   I click the Primary Issuance activity tab
     And   I click the button on "0"
-    And   I click Create Composite button
-   #And   I click cancel button
+    And   I click Display Composite button
+    And   I click logic button
+
+  Scenario: Add a Comment
+    Given I navigate to the application
+    And   I enter the username as  "JohnDoe"
+    And   I enter the password as "Password11*"
+    And   I click login button
+    And   I click the Primary Issuance activity tab
+    And   I click the button on "0"
+    And   I click  Add comment button
+
+  Scenario: Verify the Grid columns title
+    Given I navigate to the application
+    And   I enter the username as  "JohnDoe"
+    And   I enter the password as "Password11*"
+    And   I click login button
+    And   I click the Primary Issuance activity tab
+    And   I verify that Tranche Name is correct
+    #And   I click the button on "0"
+
+
+  Scenario: Verify that the Default Grid restore all the field on the grid
+    Given I navigate to the application
+    And   I enter the username as  "JohnDoe"
+    And   I enter the password as "Password11*"
+    And   I click login button
+    And   I click the Primary Issuance activity tab
+    And   I click the column button
+    And   I click the checkbox to unselect the values
+    #And   I click the default grid button
+
+  Scenario: Verify that the clear filter clears filters all the field on the grid
+    Given I navigate to the application
+    And   I enter the username as  "JohnDoe"
+    And   I enter the password as "Password11*"
+    And   I click login button
+    And   I click the Primary Issuance activity tab
+    And   I click the clear filters button

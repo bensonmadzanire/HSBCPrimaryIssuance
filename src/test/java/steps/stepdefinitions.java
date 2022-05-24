@@ -152,4 +152,125 @@ public class stepdefinitions {
         GridFunctions.selectPlusButtonInHSBCGrid(Integer.parseInt(rowNumber));
         Thread.sleep(3000);
     }
+
+    @And("I click Display Composite button")
+    public void iClickDisplayCompositeButton() {
+        homePage.clickDisplayComposite();
+    }
+
+    @And("I click  Add comment button")
+    public void iClickAddCommentButton() {
+        homePage.clickAddCommentButton();
+    }
+
+    @And("I click logic button")
+    public void iClickLogicButton() {
+        homePage.clickLogicButton();
+    }
+
+    @And("i verify that the Tranche Name is correct")
+    public void iVerifyThatTheTrancheNameIsCorrect() {
+        homePage.verifyTranceName();
+    }
+
+    @And("I click the column button")
+    public void iClickTheColumnButton() {
+        homePage.clickColumnButton();
+    }
+    @And("I click the default grid button")
+    public void iClickTheDefaultGridButton() {
+        homePage.clickDefaultGridButton();
+    }
+
+    @And("I click the clear filters button")
+    public void iClickTheClearFiltersButton() {
+        homePage.clickClearFilterButton();
+    }
+
+    @And("I click the checkbox to unselect the values")
+    public void iClickTheCheckboxToUnselectTheValues() throws InterruptedException {
+       CommonFunctions.selectCheckBox("#ag-6967-input");
+    }
+
+    @And("I click Tranche Name")
+    public void iClickTrancheName() throws InterruptedException {
+        Thread.sleep(3000);
+     homePage.clickTrancheName();
+    }
+
+    @And("I click the date and time")
+    public void iClickTheDateAndTime() throws InterruptedException {
+        Thread.sleep(3000);
+        homePage.clickTheDateandTime();
+    
+    }
+
+    @And("I verify the Tranche Name")
+    public void iVerifyTheTrancheName() {
+        homePage.verifyTranceName();
+    }
+
+    @And("I verify that Tranche Name is correct")
+    public void iVerifyThatTrancheNameIsCorrect() {
+        CommonFunctions.waitForElement("Tranche Name","Tranche Name");
+        CommonFunctions.elementPresent("Tranche Name","Tranche Name");
+        CommonFunctions.elementPresent("Date & Time","Date & Time");
+        CommonFunctions.elementPresent("Last Modification","Last Modification");
+        CommonFunctions.elementPresent("Maturity Date","Maturity Date");
+        CommonFunctions.elementPresent("Ccy","Ccy");
+        CommonFunctions.elementPresent("Rating","Rating");
+        CommonFunctions.elementPresent("Sector","Sector");
+        CommonFunctions.elementPresent("Book Size","Book Size");
+        CommonFunctions.elementPresent("Deal Size","Deal Size");
+        CommonFunctions.elementPresent("IPTS","IPTS");
+        CommonFunctions.elementPresent("Guidance","Guidance");
+        CommonFunctions.elementPresent("Benchmark","Benchmark");
+        CommonFunctions.elementPresent("Book Runners","Book Runners");
+        CommonFunctions.elementPresent("Classification","Classification");
+        CommonFunctions.elementPresent("Bond Seniority","Bond Seniority");
+        CommonFunctions.elementPresent("Book Status","Book Status");
+        CommonFunctions.elementPresent("B&D Bank","B&D Bank");
+        CommonFunctions.elementPresent("Coupon Frequency","Coupon Frequency");
+        CommonFunctions.elementPresent("Coupon Type","Coupon Type");
+        CommonFunctions.elementPresent("Day Count","Day Count");
+        CommonFunctions.elementPresent("Deal Status","Deal Status");
+        CommonFunctions.elementPresent("Is ESG","Is ESG");
+        CommonFunctions.elementPresent("ESG Type","ESG Type");
+        CommonFunctions.elementPresent("Exchange","Exchange");
+        CommonFunctions.elementPresent("Country of Issue","Country of Issue");
+        CommonFunctions.elementPresent("Issuer LEI","Issuer LEI");
+        CommonFunctions.elementPresent("Issuer Name","Issuer Name");
+        CommonFunctions.elementPresent("Issuer Rating","Issuer Rating");
+        CommonFunctions.elementPresent("Ticker","Ticker");
+        CommonFunctions.elementPresent("Registration Type","Registration Type");
+        CommonFunctions.elementPresent("CUSIP","CUSIP");
+        CommonFunctions.elementPresent("FIGI","FIGI");
+        CommonFunctions.elementPresent("ISIN","ISIN");
+        CommonFunctions.elementPresent("Coupon","Coupon");
+        CommonFunctions.elementPresent("Increment","Increment");
+        CommonFunctions.elementPresent("Min Piece","Min Piece");
+        CommonFunctions.elementPresent("Callable Date","Callable Date");
+        CommonFunctions.elementPresent("1st Coupon Date","1st Coupon Date");
+        CommonFunctions.elementPresent("Settlement Date","Settlement Date");
+        CommonFunctions.elementPresent("Is Perpetual","Is Perpetual");
+        CommonFunctions.elementPresent("Will Not Grow","Will Not Grow");
+        CommonFunctions.elementPresent("Is Tap","Is Tap");
+        CommonFunctions.elementPresent("Current Size","Current Size");
+        CommonFunctions.elementPresent("Country of Risk","Country of Risk");
+        CommonFunctions.elementPresent("CorpRed Classification","CorpRed Classification");
+        CommonFunctions.elementPresent("Reallocate","Reallocate");
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 }

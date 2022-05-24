@@ -1,6 +1,6 @@
 Feature: Single Page Application
 
-  Scenario: Test the  functionality
+  Scenario: Successful login to the application
     Given I navigate to the application
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
@@ -14,16 +14,18 @@ Feature: Single Page Application
     And   I click submit button
     #And   I click the Category and Ratings tab
 
-
-
-  Scenario: Closing the book now
+  Scenario: login to the application
     Given I navigate to the application
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
-    And   I click the Implementation tab
-    And   I click  the close book button
-    And   I click close book now button
+    And   I verify the Tranche Name
+    #And   I click Tranche Name
+    And   I click the date and time
+
+    #And   I click Create Composite button
+
+
 
 
 
