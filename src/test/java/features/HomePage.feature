@@ -72,7 +72,7 @@ Scenario: Display the Decision screen
     And   I enter the password as "Password11*"
     And   I click login button
     And   I click the Primary Issuance activity tab
-    And   I verify that Tranche Name is correct
+    And   I verify that all the grid column titles are correct
     #And   I click the button on "0"
 
 

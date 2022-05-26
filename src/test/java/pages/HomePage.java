@@ -39,7 +39,7 @@ public class HomePage {
         return true;
     }
     public boolean clickCheckbox() throws InterruptedException {
-
+ 
         return true;
     }
     public boolean clickTimerRadioButton() {

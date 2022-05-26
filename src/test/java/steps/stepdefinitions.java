@@ -189,7 +189,7 @@ public class stepdefinitions {
 
     @And("I click the checkbox to unselect the values")
     public void iClickTheCheckboxToUnselectTheValues() throws InterruptedException {
-       CommonFunctions.selectCheckBox("#ag-6967-input");
+      homePage.clickCheckbox();
     }
 
     @And("I click Tranche Name")
@@ -210,8 +210,8 @@ public class stepdefinitions {
         homePage.verifyTranceName();
     }
 
-    @And("I verify that Tranche Name is correct")
-    public void iVerifyThatTrancheNameIsCorrect() {
+    @And("I verify that all the grid column titles are correct")
+    public void iVerifyThatAllTheGridColumnTitlesAreCorrect()  {
         CommonFunctions.waitForElement("Tranche Name","Tranche Name");
         CommonFunctions.elementPresent("Tranche Name","Tranche Name");
         CommonFunctions.elementPresent("Date & Time","Date & Time");
@@ -273,4 +273,6 @@ public class stepdefinitions {
 
 
     }
+
+
 }

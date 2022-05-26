@@ -680,5 +680,14 @@ public class CommonFunctions {
         actualElement = handle.textContent();
         Assert.assertEquals(actualElement.trim(), expectedElement);
     }
+    /**
+     * This is a common funtion which can be use to select checkbox
+     *
+     * @param fieldName the field name
+     */
+    public static void selectCheckBox1(String fieldName) {
+        page.click("div.entryField:has-text(\"" + fieldName + "\") fast-checkbox");
+    }
+
 
 }
