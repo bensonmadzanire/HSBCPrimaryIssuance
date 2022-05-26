@@ -1,5 +1,5 @@
 Feature: Single Page Application
-
+@CreateComposite
   Scenario: Successful login to the application
     Given I navigate to the application
     And   I enter the username as  "JohnDoe"
@@ -13,14 +13,13 @@ Feature: Single Page Application
     And   I enter the Tranche currency
     And   I click submit button
     #And   I click the Category and Ratings tab
-
+@Loginfeature
   Scenario: login to the application
     Given I navigate to the application
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
-    And   I verify the Tranche Name
-    #And   I click Tranche Name
+    And   I click Tranche Name
     And   I click the date and time
 
     #And   I click Create Composite button
