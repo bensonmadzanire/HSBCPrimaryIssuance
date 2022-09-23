@@ -275,4 +275,8 @@ public class stepdefinitions {
     }
 
 
+    @And("I click SSOEnabled checkbox")
+    public void iClickSSOEnabledCheckbox() {
+     homePage.clickSSOEnabledChecknox();
+    }
 }

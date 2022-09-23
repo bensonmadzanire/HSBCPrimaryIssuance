@@ -3,6 +3,7 @@ Feature: Test the functionality on the SPA
 
   Scenario: Create a Composite
     Given I navigate to the application
+    And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
@@ -18,6 +19,7 @@ Feature: Test the functionality on the SPA
 
   Scenario: Adding Issuance without entering mandatory fields
 Given I navigate to the application
+
 And   I enter the username as  "JohnDoe"
 And   I enter the password as "Password11*"
 And   I click login button
@@ -26,6 +28,7 @@ And   I click submit button
 
 Scenario: Display the info trail screen
 Given I navigate to the application
+  And   I click SSOEnabled checkbox
   And   I enter the username as  "JohnDoe"
   And   I enter the password as "Password11*"
   And   I click login button
@@ -34,6 +37,7 @@ Given I navigate to the application
 
 Scenario: Display the Decision screen
   Given I navigate to the application
+  And   I click SSOEnabled checkbox
   And   I enter the username as  "JohnDoe"
   And   I enter the password as "Password11*"
   And   I click login button
@@ -41,6 +45,7 @@ Scenario: Display the Decision screen
 
   Scenario: Cancelling an Issuance creation screen
     Given I navigate to the application
+    And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
@@ -49,6 +54,7 @@ Scenario: Display the Decision screen
 
   Scenario: Display the Primary Issuance screen
     Given I navigate to the application
+    And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
@@ -59,6 +65,7 @@ Scenario: Display the Decision screen
 
   Scenario: Add a Comment
     Given I navigate to the application
+    And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
@@ -68,6 +75,7 @@ Scenario: Display the Decision screen
 
   Scenario: Verify the Grid columns title
     Given I navigate to the application
+    And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
@@ -78,6 +86,7 @@ Scenario: Display the Decision screen
 
   Scenario: Verify that the Default Grid restore all the field on the grid
     Given I navigate to the application
+    And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
@@ -88,6 +97,7 @@ Scenario: Display the Decision screen
 
   Scenario: Verify that the clear filter clears filters all the field on the grid
     Given I navigate to the application
+    And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button

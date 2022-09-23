@@ -25,6 +25,10 @@ public class HomePage {
         page.dispatchEvent(":nth-match(:text('Date & Time'), 1) >> visible=true", "click");
         return true;
     }
+    public boolean clickSSOEnabledChecknox() {
+        page.dispatchEvent("zero-checkbox:has-text('SSO Enabled - hsbc') >> visible=true", "click");
+        return true;
+    }
 
     public boolean clickCloseBooksButton() {
         page.dispatchEvent("zero-button:has-text('Close Book') >> visible=true", "click");
