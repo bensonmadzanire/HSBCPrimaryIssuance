@@ -11,6 +11,7 @@ Feature: Test the Implementation page
 
   Scenario: Closing the book after 15minutes
     Given I navigate to the application
+    And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
@@ -21,6 +22,7 @@ Feature: Test the Implementation page
 
   Scenario: Closing the book now
     Given I navigate to the application
+    And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
@@ -31,6 +33,7 @@ Feature: Test the Implementation page
 
   Scenario: Send to Bookrunners
     Given I navigate to the application
+    And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
@@ -40,6 +43,7 @@ Feature: Test the Implementation page
 
   Scenario: Send to Bookrunners and click the joint bookrunners checkbox
     Given I navigate to the application
+    And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button

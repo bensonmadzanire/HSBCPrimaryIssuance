@@ -2,6 +2,7 @@ Feature: Single Page Application
 @CreateComposite
   Scenario: Successful login to the application
     Given I navigate to the application
+    And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
@@ -15,6 +16,7 @@ Feature: Single Page Application
     #And   I click the Category and Ratings tab
 @Loginfeature
   Scenario: login to the application
+    And   I click SSOEnabled checkbox
     Given I navigate to the application
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"

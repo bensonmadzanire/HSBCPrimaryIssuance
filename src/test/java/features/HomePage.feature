@@ -19,7 +19,7 @@ Feature: Test the functionality on the SPA
 
   Scenario: Adding Issuance without entering mandatory fields
 Given I navigate to the application
-
+    And   I click SSOEnabled checkbox
 And   I enter the username as  "JohnDoe"
 And   I enter the password as "Password11*"
 And   I click login button
