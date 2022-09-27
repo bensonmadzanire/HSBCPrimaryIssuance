@@ -1,15 +1,14 @@
 Feature: Test the functionality on the SPA
-
-
-  Scenario: Create a Composite
+  @CreateNewIssue
+  Scenario: Create New Issue
     Given I navigate to the application
     And   I click SSOEnabled checkbox
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
-    And   I click Create Composite button
-    And   I enter the issuer name as "TANDEM"
-    And   I enter the issuer tranche name as "TANROY"
+    And   I click Create new issue button
+    And   I enter the issuer name as "CHEVRON"
+    And   I enter the issuer tranche name as "CHEVRONTES"
     And   I click on registration type
     And   I enter the Maturity date
     And   I enter the Tranche currency
@@ -23,7 +22,7 @@ Given I navigate to the application
 And   I enter the username as  "JohnDoe"
 And   I enter the password as "Password11*"
 And   I click login button
-And   I click Create Composite button
+And   I click Create new issue button
 And   I click submit button
 
 Scenario: Display the info trail screen
@@ -49,7 +48,7 @@ Scenario: Display the Decision screen
     And   I enter the username as  "JohnDoe"
     And   I enter the password as "Password11*"
     And   I click login button
-    And   I click Create Composite button
+    And   I click Create new issue button
     And   I click cancel button
 
   Scenario: Display the Primary Issuance screen
@@ -59,8 +58,8 @@ Scenario: Display the Decision screen
     And   I enter the password as "Password11*"
     And   I click login button
     And   I click the Primary Issuance activity tab
-    And   I click the button on "0"
-    And   I click Display Composite button
+    And   I click the button on "1"
+    And   I click Create new issue button
     And   I click logic button
 
   Scenario: Add a Comment

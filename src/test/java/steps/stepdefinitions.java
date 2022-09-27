@@ -37,10 +37,8 @@ public class stepdefinitions {
         loginPage.capturePasswordField(password);
     }
 
-    @And("I click Create Composite button")
-    public void iClickCreateCompositeButton() {
-        homePage.clickCreateComposite();
-    }
+
+
 
     @And("I enter the issuer name as {string}")
     public void iEnterTheIssuerNameAs(String issuerName) {
@@ -153,10 +151,7 @@ public class stepdefinitions {
         Thread.sleep(3000);
     }
 
-    @And("I click Display Composite button")
-    public void iClickDisplayCompositeButton() {
-        homePage.clickDisplayComposite();
-    }
+
 
     @And("I click  Add comment button")
     public void iClickAddCommentButton() {
@@ -278,5 +273,10 @@ public class stepdefinitions {
     @And("I click SSOEnabled checkbox")
     public void iClickSSOEnabledCheckbox() {
      homePage.clickSSOEnabledChecknox();
+    }
+
+    @And("I click Create new issue button")
+    public void iClickCreateNewIssueButton() {
+        homePage.clickCreateNewIssue();
     }
 }

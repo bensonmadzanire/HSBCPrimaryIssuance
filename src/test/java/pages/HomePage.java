@@ -115,8 +115,8 @@ public class HomePage {
     }
 
 
-    public boolean clickCreateComposite() {
-        page.dispatchEvent("zero-button:has-text('Create Composite') >> visible=true", "click");
+    public boolean clickCreateNewIssue() {
+        page.dispatchEvent("zero-button:has-text('Create New Issue') >> visible=true", "click");
         return true;
     }
 
