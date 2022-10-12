@@ -18,13 +18,13 @@ Feature: Test the functionality on the SPA
 
   Scenario: Adding Issuance without entering mandatory fields
 Given I navigate to the application
-    And   I click SSOEnabled checkbox
+And   I click SSOEnabled checkbox
 And   I enter the username as  "JohnDoe"
 And   I enter the password as "Password11*"
 And   I click login button
 And   I click Create new issue button
 And   I click submit button
-
+@DisplayInforscreen
 Scenario: Display the info trail screen
 Given I navigate to the application
   And   I click SSOEnabled checkbox
@@ -32,8 +32,8 @@ Given I navigate to the application
   And   I enter the password as "Password11*"
   And   I click login button
   And   I click the Infor Trail tab
-  And   I click the button on "0"
-
+  And   I click the button on "1"
+@DisplayDecisionscreen
 Scenario: Display the Decision screen
   Given I navigate to the application
   And   I click SSOEnabled checkbox

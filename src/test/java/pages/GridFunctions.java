@@ -20,7 +20,7 @@ public class GridFunctions {
     }
 
 public static void selectPlusButtonInHSBCGrid(int rowNumber){
-    page.querySelector("div.ag-pinned-left-cols-container").querySelector("css=[row-index=\'"+rowNumber+"\']").querySelector("css=[col-id='1']").querySelector("div button").dispatchEvent("click");
+    page.querySelector("div.ag-pinned-left-cols-container").querySelector("css=[row-index=\'"+rowNumber+"\']").querySelector("css=[col-id='2']").querySelector("div button").dispatchEvent("click");
 }
     public static void selectCheckboxInGrid(int gridNumber,int row,int column)
     {

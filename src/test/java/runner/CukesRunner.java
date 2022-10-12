@@ -7,14 +7,12 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
-                "pretty", "json:target/cucumber.json",
-                "html:target/cucumber-report.html",
-                "rerun:target/rerun.txt"
-        },
+                "pretty", "json:target/cucumber.json,","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
+           },
         features = "src/test/java/features",
         glue = "steps",
-        dryRun = false,
-        tags = "@CreateNewIssue"
+        dryRun = false
+        //tags = "@CreateNewIssue"
 )
 public class CukesRunner {
 

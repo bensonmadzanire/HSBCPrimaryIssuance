@@ -15,7 +15,7 @@ public class stepdefinitions {
 
     @Given("I navigate to the application")
     public void i_navigate_to_the_application() {
-        FrameworkConfig.LocalPage.navigate("https://dev-hsbc-priss1/login");
+        FrameworkConfig.LocalPage.navigate("https://qa-hsbc-priss1/login");
 
     }
 
