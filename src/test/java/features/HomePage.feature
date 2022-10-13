@@ -1,4 +1,5 @@
 Feature: Test the functionality on the SPA
+  @Severity=blocker
   @CreateNewIssue
   Scenario: Create New Issue
     Given I navigate to the application
@@ -15,7 +16,7 @@ Feature: Test the functionality on the SPA
     And   I click submit button
     #And   I click the Category and Ratings tab
 
-
+  @Severity=critical
   Scenario: Adding Issuance without entering mandatory fields
 Given I navigate to the application
 And   I click SSOEnabled checkbox
@@ -24,6 +25,7 @@ And   I enter the password as "Password11*"
 And   I click login button
 And   I click Create new issue button
 And   I click submit button
+@Severity=normal
 @DisplayInforscreen
 Scenario: Display the info trail screen
 Given I navigate to the application
@@ -32,7 +34,7 @@ Given I navigate to the application
   And   I enter the password as "Password11*"
   And   I click login button
   And   I click the Infor Trail tab
-  And   I click the button on "1"
+  #And   I click the button on "2"
 @DisplayDecisionscreen
 Scenario: Display the Decision screen
   Given I navigate to the application
@@ -58,9 +60,9 @@ Scenario: Display the Decision screen
     And   I enter the password as "Password11*"
     And   I click login button
     And   I click the Primary Issuance activity tab
-    And   I click the button on "1"
-    And   I click Create new issue button
-    And   I click logic button
+    And   I click the button on "2"
+    #And   I click Create new issue button
+    #And   I click logic button
 
   Scenario: Add a Comment
     Given I navigate to the application

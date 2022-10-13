@@ -21,5 +21,8 @@ public class Hooks {
     public void cleanUp() throws Exception {
         FrameworkConfig.LocalPage.close();
         FrameworkConfig.Playwright.close();
+
+
     }
+
 }
