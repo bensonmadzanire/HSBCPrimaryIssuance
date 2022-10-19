@@ -207,6 +207,7 @@ public class stepdefinitions {
 
     @And("I verify that all the grid column titles are correct")
     public void iVerifyThatAllTheGridColumnTitlesAreCorrect()  {
+        CommonFunctions.elementPresent("","");
         CommonFunctions.waitForElement("Tranche Name","Tranche Name");
         CommonFunctions.elementPresent("Tranche Name","Tranche Name");
         CommonFunctions.elementPresent("Date & Time","Date & Time");
@@ -255,18 +256,6 @@ public class stepdefinitions {
         CommonFunctions.elementPresent("CorpRed Classification","CorpRed Classification");
         CommonFunctions.elementPresent("Reallocate","Reallocate");
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 
@@ -278,5 +267,10 @@ public class stepdefinitions {
     @And("I click Create new issue button")
     public void iClickCreateNewIssueButton() {
         homePage.clickCreateNewIssue();
+    }
+
+    @And("I click the grid row")
+    public void iClickTheGridRow() {
+
     }
 }

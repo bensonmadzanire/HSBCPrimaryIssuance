@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
            },
         features = "src/test/java/features",
         glue = "steps",
-        dryRun = false
-        //tags = "@CreateNewIssue"
+        dryRun = false,
+        tags = "@DisplayDecisionscreen"
 )
 public class CukesRunner {
 

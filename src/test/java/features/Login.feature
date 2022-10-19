@@ -17,7 +17,8 @@ Feature: Single Page Application
     And   I click Tranche Name
     And   I click the date and time
 
-    #And   I click Create Composite button
+
+
 
 
 

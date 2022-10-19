@@ -43,6 +43,7 @@ Scenario: Display the Decision screen
   And   I enter the password as "Password11*"
   And   I click login button
   And   I click the Decision screen
+  And   I click the grid row
 
   Scenario: Cancelling an Issuance creation screen
     Given I navigate to the application
@@ -52,7 +53,7 @@ Scenario: Display the Decision screen
     And   I click login button
     And   I click Create new issue button
     And   I click cancel button
-
+@Reallocate
   Scenario: Display the Primary Issuance screen
     Given I navigate to the application
     And   I click SSOEnabled checkbox
@@ -61,7 +62,7 @@ Scenario: Display the Decision screen
     And   I click login button
     And   I click the Primary Issuance activity tab
     And   I click the button on "2"
-    #And   I click Create new issue button
+    And   I click submit button
     #And   I click logic button
 
   Scenario: Add a Comment
@@ -94,7 +95,7 @@ Scenario: Display the Decision screen
     And   I click the Primary Issuance activity tab
     And   I click the column button
     And   I click the checkbox to unselect the values
-    #And   I click the default grid button
+    And   I click the default grid button
 
   Scenario: Verify that the clear filter clears filters all the field on the grid
     Given I navigate to the application

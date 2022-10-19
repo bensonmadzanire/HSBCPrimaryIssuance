@@ -16,7 +16,8 @@ public class FrameworkInitialize {
         BrowserType.LaunchOptions launchOptions = new BrowserType.LaunchOptions();
         launchOptions.headless = Settings.Headless;
         launchOptions.devtools = Settings.DevTools;
-        launchOptions.setSlowMo(500);
+        launchOptions.setSlowMo(1000);
+
 
 
         //Get Browser
